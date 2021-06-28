@@ -1,0 +1,55 @@
+
+
+.room-code {
+  height: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  background: #fff;
+  border: 1px solid #835afd;
+  cursor: pointer;
+  
+  display: flex;
+
+
+  > div {
+    height: 100%;
+    background: #835afd;
+    padding: 0 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  span {
+    display: block;
+    align-self: center;
+    flex: 1;
+    padding: 0 16px 0 14px;
+    width: 150px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  &:focus {
+    animation-name: example;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes example {
+    0%   {
+      background: #FFF;
+      color: #000;
+    }
+    25%  {
+      background: rgb(205, 255, 211);
+      color: #FFF;
+    }
+    35%  {
+      background: rgb(200, 255, 206);
+    }
+    100% {
+      background: rgb(255, 255, 255);
+    }
+  }
+}

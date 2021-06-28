@@ -3,6 +3,7 @@
   align-items: stretch;
   height: 100vh;
 
+
   aside{
     flex: 7;
     background-color: #835afd;
@@ -34,12 +35,25 @@
     }
   }
 
+  @media (max-width: 1000px) {
+    aside {
+      width: 45%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    aside {
+      display: none;
+    }
+  }
+
   main{
     flex: 8;
   
     padding: 0 2rem;
   
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   
@@ -50,6 +64,10 @@
     max-width: 320px;
     align-items: stretch;
     text-align: center;
+
+    .create-room-icon {
+      margin: 0.7rem;
+    }
 
       > img{
         align-self: center;
@@ -67,13 +85,31 @@
         flex-direction: column;
         justify-content: center;
         // align-items: center;
+
+        input[type="file"] {
+          display: none;
+      }
+
+      .custom-file-upload {
+        border: 1px solid #ccc;
+        padding: .5rem 1rem;
+        cursor: pointer;
+        border-radius: .5rem;
+        transition: .1s linear;
+        
+        &:hover{
+          background-color: #e559f9;  
+          color: #fff;
+        }
+    }
         
         input{
           height: 3rem;
           border-radius: 0.5rem;
-          padding: 0 1rem;
+          padding: 1rem;
           background-color: #fff;
           border: 1px solid #dfdfdf;
+          margin: 1rem 0;
         }
         button{
           margin-top: 1rem;
@@ -152,7 +188,96 @@
       margin-left: 1rem;
     }
   }
+
+  .modal-delete-question {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+
+    img {
+      width: 25%;
+    }
+
+    h2 {
+      padding: 0;
+    }
+
+    p {
+      padding: 1rem;
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      button:first-child {
+        background: #E2E2E2;
+      }
+  
+       button {
+        background: #E73F5D;
+      }
+    }
+  }
+
+  .rooms-content {
+    width: 100%;
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+
+    h2{
+      width: 100%;
+      font-size: 1.4rem;
+      margin: 4rem 0 1.5rem;
+      font-family: 'Poppins', sans-serif;
+      color: #383838;
+    }
+
+    a {
+
+      width: 30%;
+      text-decoration: none;
+      transition: .2s linear;
+
+      .my-rooms {
+        width: 100%;
+        background-color: #835afd;
+        color: #fff;
+        border-radius: 1rem;
+        padding: 1rem;
+  
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: .1s linear;
+
+        &:hover {
+          background-color: #FFF;
+          color: #835afd;
+          border: 1px solid #835afd;
+        }
+    }
+      // flex-wrap: wrap;
+      
+
+      span {
+        font-weight: 500;
+      }
+    }
+
+  }
 }
 
-
+@media (max-width: 768px) {
+  #page-auth {
+    height: auto;
+  }
+}
 

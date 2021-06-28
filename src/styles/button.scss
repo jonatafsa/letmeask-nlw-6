@@ -1,5 +1,4 @@
 .button{
-  margin-top: 4rem;
   height: 3.5rem;
   border-radius: 0.5rem;
   font-weight: 500;
@@ -13,11 +12,18 @@
   cursor: pointer;
   border: 0;
 
-  transition: .3s ease-in-out;
+  transition: .2s ease-in-out;
 
   img{
     margin-right: 0.5rem;
-    transition: .5s ease-in-out;
+    transition: .2s ease-in-out;
+  }
+
+  &.outlined {
+    background: #FFF;
+    border: 1px solid #835afd;
+    color: #835afd;
+    font-size: 0.9rem;
   }
 
   &:hover img{

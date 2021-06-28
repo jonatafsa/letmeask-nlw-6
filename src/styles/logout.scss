@@ -1,0 +1,11 @@
+  .logout-icon {
+    margin: 1rem;
+    transition: .2s linear;
+    position: fixed;
+    bottom: 0;
+  }
+
+  .logout-icon:hover {
+    transform: scale(1.05);
+    color: red;
+  }
